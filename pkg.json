@@ -1,0 +1,10 @@
+{
+  "scripts": [
+    "modules/*",
+    "app.js"
+  ],
+  "assets": [
+    "assets/*",
+    "assets/**/*"
+  ]
+}

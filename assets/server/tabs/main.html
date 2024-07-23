@@ -1,0 +1,47 @@
+<div id="main-container" class="flex">
+    <div id="content-main">
+        <div class="flex line">
+            <div class="input-plaseholder">
+                <select id="host_select">
+                    <option value="All">All</option>
+                    <option value="Local">Local</option>
+                    <option value="IPv4">IPv4</option>
+                    <option value="IPv6">IPv6</option>
+                </select>
+                <label for='host_select' class="placeholder focused">Type IP</label>
+            </div>
+            <div style="flex: 1" class="input-plaseholder">
+                <input type="number" value = "8080" id="portInput" required>
+                <label for='portInput' class="placeholder">Enter PORT</label>
+            </div>
+        </div>
+        <div class="flex line">
+            <div class="input-plaseholder">
+                <input type="text" id="pathInput" required>
+                <label for='pathInput' class="placeholder">Enter path</label>
+            </div>
+            <button id="pathSelectBtn" title="Select folder">
+                <i class="bi bi-folder-symlink-fill" style="font-size: 1.3em;"></i>
+            </button>
+        </div>
+        <div id="server-buttons" class="flex line">
+            <button id="startServerBtn">Run server</button>
+            <button id="restartServerBtn" title="Restart">
+                <i class="bi bi-arrow-repeat" style="font-size: 1.3em;"></i>
+            </button>
+            <button id="qrServerBtn" title="QR Code">
+                <i class="bi bi-qr-code-scan"></i>
+            </button>
+            <button id="webServerBtn" title="Open link">
+                <i class="bi bi-browser-chrome"></i>
+            </button>
+        </div>
+    </div>
+    <div class="info">
+        1. Select folder<br>
+        2. Start server<br>
+        3. Get qr code or link<br><br>
+        (In the settings you can: change to https; set a password or initial file; etc.)
+    </div>
+    <script src="./server/tabs/main.js"></script>
+</div>

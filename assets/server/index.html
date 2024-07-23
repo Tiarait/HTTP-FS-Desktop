@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, interactive-widget=resizes-content">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Cache-control" content="public">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/favicon.ico"
+    />
+    <title>HTTP FS SERVER</title>
+    <link href="./server/styles.css" rel="stylesheet">
+    <link href="./server/bootstrap-icons.css" rel="stylesheet">
+    <script>
+      var theme = localStorage.getItem('theme');
+      var isRun = false;
+      var settings = null;
+      if (theme == null) {
+          if ( window.matchMedia( "(prefers-color-scheme: dark)" ).matches ) {
+              theme = "dark";
+          } else {
+              theme = "light";
+          }
+      }
+      localStorage.setItem("theme", theme);
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+</head>
+<body>
+    <div id="container" class="flex column">
+        <div id="header" class="flex line">
+            <div id="main-header" class="flex">
+                <div id="logo" class="brand-icon"></div><div class="brand-text">Http FS Desktop</div>
+            </div>
+            <a href="https://www.patreon.com/TiarDev" target="_blank"><button id="patreon-btn" title="Patreon"></button></a>
+            <a href="https://buymeacoffee.com/tiarapps" target="_blank"><button id="coffee-btn" title="Buy me a coffee"></button></a>
+            <a href="https://play.google.com/store/apps/details?id=tiar.ua.slf" target="_blank"><button id="gp-btn" title="Android">
+                <i class="bi bi-google-play" style="font-size: 1.6em;"></i>
+            </button></a>
+            <a href="https://github.com/Tiarait/HTTP-FS-Desktop" target="_blank"><button id="git-btn" title="Github">
+                <i class="bi bi-github" style="font-size: 1.6em;"></i>
+            </button></a>
+        </div>
+        <div class="view flex row" style="align-items: flex-start;">
+            <div id="menu-left" class="left flex column">
+                <a href="/?tab=main" id="tab-main" class="squeare-tab">
+                    <i class="bi bi-grid-1x2-fill"></i><p>Main</p>
+                </a>
+                <a href="/?tab=logs" id="tab-logs" class="squeare-tab">
+                    <i class="bi bi bi-graph-up"></i><p>Logs</p>
+                </a>
+                <a href="/?tab=settings" id="tab-settings"  class="squeare-tab">
+                    <i class="bi bi-gear-fill"></i><p>Settings</p>
+                </a>
+            </div>
+            <div id="content" class="right hide">
+                [CONTENT]
+            </div>
+        </div>
+    </div>
+    <div id="notifications" class="flex column"></div>
+    <div id="qrcode" style="display: none;" class="hide"></div>
+    <script src="./server/qrcode.min.js"></script>
+    <script src="./server/index.js"></script>
+</body>
+</html>

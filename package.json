@@ -1,0 +1,35 @@
+{
+  "name": "HttpFS",
+  "version": "0.0.0.1",
+  "description": "Http File Server.",
+  "keywords": [],
+  "author": "Tiar <tiar.develop@gmail.com>",
+  "license": "Copyright 2024, AGPL-3.0",
+  "homepage": "https://github.com/Tiarait/HTTP-FS-Desktop",
+  "main": "app.js",
+  "bin": {
+    "execute": "app.js"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "build-pkg-win": "pkg app.js --out-name tiar.ua.slf.desktop -C GZip --targets node18-win-x64 --config pkg.json --output 'out/HttpFS-beta-full(win-x64).exe'",
+    "build-pkg-mac": "pkg app.js --out-name tiar.ua.slf.desktop -C GZip --targets node18-macos-arm64 --config pkg.json --output 'out/HttpFS-beta-full(macos-arm64)'"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "commander": "^8.2.0",
+    "cookie-session": "^2.1.0",
+    "fast-folder-size": "^2.2.0",
+    "formidable": "^2.1.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.0.0",
+    "mime": "^2.6.0",
+    "open": "^7.0.3",
+    "path": "^0.12.7",
+    "read-last-lines": "^1.8.0",
+    "serve-static": "^1.14.1",
+    "url": "^0.11.3",
+    "ws": "^8.17.0",
+    "yazl": "^2.5.1"
+  }
+}

@@ -1,0 +1,248 @@
+<div id="settings-container" class="flex row">
+    <div id="cat-app" class="category blue">
+        <p>App settings</p>
+        <div type="button" tabindex="0" class="settings flex line">
+            <div label="wip" id="setting-langapp" class="flex input disable">
+                <p style="flex: auto">English</p>
+                <label class="help" title="Work in Progress.">wip</label>
+            </div>
+            <!-- <label for="setting-langapp" class="placeholder focused" style="margin-left: 24px;">Language</label> -->
+        </div>
+        <!-- <div class="input-plaseholder flex line">
+            <select id="setting-langapp">
+                <option value="def">English</option>
+            </select>
+            <label for="setting-langapp" class="placeholder focused">Language</label>
+        </div> -->
+
+        <div id="setting-autoweb" type="button" tabindex="0" class="settings button flex line">
+            <p>Open in web when start app</p>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="setting-autoserver" type="button" tabindex="0" class="settings button flex line">
+            <p>Auto start server with app</p>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="setting-files" class="flex wrap line">
+            <div style="flex: 1;" class="flex line">
+                <div style="flex: 10; cursor: pointer;" class="input-plaseholder line">
+                    <p type="button" tabindex="0" class="input disable canselect" id="logFilePath"></p>
+                    <label class="placeholder active">Logs file</label>
+                </div>
+                <button style="flex: 1; max-width: 70px; margin-left: 4px;" id="clear_logs">
+                    <i class="bi bi-trash3-fill" style="font-size: 1.3em;"></i>
+                </button>
+            </div>
+            <div style="flex: 1;" class="flex line">
+                <div style="flex: 10; cursor: pointer;" class="input-plaseholder line">
+                    <p type="button" tabindex="0" class="input disable canselect" id="configFilePath"></p>
+                    <label class="placeholder active">Settings file</label>
+                </div>
+                <button style="flex: 1; max-width: 70px; margin-left: 4px;" id="clear_settings">
+                    <i class="bi bi-trash3-fill" style="font-size: 1.3em;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="cat-server" class="category green">
+        <p>Server settings</p>
+        <div id="cat-server-security" class="category blue">
+            <p>Interfaces</p>
+            <div id="setting-webdav" label="wip" type="button" tabindex="0" class="settings button flex line disable">
+                <p>WebDAV</p>
+                <label class="help" title="Work in Progress.">wip</label>
+                <!-- <label class="switch disabled">
+                <input type="checkbox" tabindex="-1" disabled>
+                <span class="slider round"></span> -->
+                </label>
+            </div>
+            <div id="setting-rss" label="wip" type="button" tabindex="0" class="settings button flex line disable">
+                <p>RSS</p>
+                <label class="help" title="Work in Progress.">wip</label>
+                <!-- <label class="switch disabled">
+                <input type="checkbox" tabindex="-1" disabled>
+                <span class="slider round"></span> -->
+                </label>
+            </div>
+        </div>
+        <div id="cat-server-security" class="category yellow">
+            <p>Settings</p>
+            <div class="input-plaseholder-container flex">
+                <div class="input-plaseholder minus line">
+                    <input label="warn" type="text" class="disable" label-help="" value = "Http FS" id="server-name" disabled>
+                    <label class="placeholder active">Server name</label>
+                </div>
+                <div class="input-plaseholder-plus flex disable">
+                    <label class="help" title="Work in Progress.">wip</label>
+                    <label class="help pro" title="Available only in pro version.">Pro</label>
+                </div>
+            </div>
+            <div class="flex line">
+                <div style="flex: 10" class="input-plaseholder">
+                    <select id="host_select">
+                        <option value="All">All</option>
+                        <option value="Local">Local</option>
+                        <option value="IPv4">IPv4</option>
+                        <option value="IPv6">IPv6</option>
+                    </select>
+                    <label for='host_select' class="placeholder focused">Type IP</label>
+                </div>
+                <div style="flex: 5" class="input-plaseholder">
+                    <input type="number" value = "8080" id="portInput" required>
+                    <label for='portInput' class="placeholder">PORT</label>
+                </div>
+            </div>
+            <div class="flex line">
+                <div class="input-plaseholder">
+                    <input type="text" id="pathInput" required>
+                    <label for='pathInput' class="placeholder">Path</label>
+                </div>
+                <button id="pathSelectBtn" style="min-width: 120px" title="Select folder">
+                    <i class="bi bi-folder-symlink-fill" style="font-size: 1.3em;"></i>
+                </button>
+            </div>
+
+            <div id="setting-initial" type="button" tabindex="0" class="settings button flex line">
+                <p>Initial file</p>
+                <label class="switch">
+                <input type="checkbox" tabindex="-1">
+                <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div id="setting-initial-container" class="flex column">
+                <div class="flex line">
+                    <div class="input-plaseholder">
+                        <input type="text" id="pathFileInput" required>
+                        <label for='pathFileInput' class="placeholder">Initial file</label>
+                    </div>
+                    <button id="pathFileSelectBtn" style="min-width: 120px" title="Select folder">
+                        <i class="bi bi-folder-symlink-fill" style="font-size: 1.3em;"></i>
+                    </button>
+                </div>
+                <div id="setting-file-redirect" type="button" tabindex="0" class="settings button flex line">
+                    <p>Hard redirect</p>
+                    <label class="switch">
+                    <input type="checkbox" tabindex="-1">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="cat-server-security" class="category red">
+            <p>Security</p>
+            <div id="setting-https" type="button" tabindex="0" class="settings button flex line">
+                <p>SSL (https)</p>
+                <label class="switch">
+                <input type="checkbox" tabindex="-1">
+                <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="setting-https-container" class="flex wrap line">
+                <div style="flex: 1;" class="input-plaseholder line">
+                    <input type="text" class="disable" value = "../assets/private.key" id="sslKeyInput" disabled>
+                    <label for='sslKeyInput' class="placeholder">KEY</label>
+                </div>
+                <div style="flex: 1;" class="input-plaseholder line">
+                    <input type="text" class="disable" value = "../assets/certificate.crt" id="sslCrtInput" disabled>
+                    <label for='sslCrtInput' class="placeholder">CRT</label>
+                </div>
+            </div>
+            <div id="setting-usepass" type="button" tabindex="0" class="settings button flex line">
+                <p>Use password</p>
+                <label class="switch">
+                <input type="checkbox" tabindex="-1">
+                <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="setting-usepass-container" class="flex wrap line">
+                <div style="flex: 10;" class="input-plaseholder">
+                    <input type="text" value = "" id="loginInput" required>
+                    <label for='loginInput' class="placeholder">Login</label>
+                </div>
+                <div style="flex: 10; margin-left: 0px;" class="input-plaseholder">
+                    <input type="text" value = "0000" id="passInput" required>
+                    <label for='passInput' class="placeholder">Password</label>
+                </div>
+                <div class="flex line" style="flex: 6; margin-left: 0px;">
+                    <div style="flex: 2" class="input-plaseholder">
+                        <input type="number" value = "60" id="sessionInput" required>
+                        <label for='sessionInput' class="placeholder">Session (min)</label>
+                    </div>
+                    <button style="flex: 3; max-width: 120px" id="logout-all">Log out</button>
+                </div>
+            </div>
+            <div class="flex wrap line">
+                <div id="setting-pread" type="button" tabindex="0" style="flex: 2" class="settings button flex line">
+                    <p>Permission read</p>
+                    <label class="switch">
+                    <input type="checkbox" tabindex="-1">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+                <div id="setting-pwrite" type="button" tabindex="0" style="flex: 2" class="settings button flex line">
+                    <p>Permission write</p>
+                    <label class="switch">
+                    <input type="checkbox" tabindex="-1">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cat-app" class="category yellow">
+        <p>Client settings</p>
+        <div type="button" tabindex="0" class="settings flex line">
+            <div label="wip" id="setting-langclient" class="flex input disable">
+                <p style="flex: auto">English</p>
+                <label class="help" title="Work in Progress.">wip</label>
+            </div>
+            <!-- <label for="setting-langclient" class="placeholder focused" style="margin-left: 24px;">Language</label> -->
+        </div>
+        <!-- <div class="input-plaseholder flex line">
+            <select id="setting-langclient">
+                <option value="def">English</option>
+            </select>
+            <label for="setting-langclient" class="placeholder focused">Language</label>
+        </div> -->
+        <div id="setting-checkconn" type="button" tabindex="0" class="settings button flex line">
+            <p>Check connection</p>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="setting-showsystem" type="button" tabindex="0" class="settings button flex line">
+            <p>Show system folder</p>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="setting-thumbnails" type="button" tabindex="0" class="settings button flex line">
+            <p>Get thumbnails</p>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="setting-clearcache" type="button" tabindex="0" class="settings button flex line">
+            <p>Clear cache: 0 b</p>
+        </div>
+        <div id="setting-foldersize" label="warn" type="button" tabindex="0" class="settings button flex line">
+            <p>Show folders size</p>
+            <label class="help warn" title="This function will significantly slow down the query time.">warn</label>
+            <label class="switch">
+              <input type="checkbox" tabindex="-1">
+              <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+</div>
+<script src="./server/tabs/settings.js"></script>
