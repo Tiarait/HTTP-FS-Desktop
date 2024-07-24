@@ -34,7 +34,19 @@ You can download it from [releases](https://github.com/Tiarait/HTTP-FS-Desktop/r
 3. `npm i`
 4. `npm run start`
 
+<br><br>
+## Screenshots
+[<img src="/screenshots/0.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/0.png)
+[<img src="/screenshots/1.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/1.png)
+[<img src="/screenshots/2.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/2.png)
+[<img src="/screenshots/3.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/3.png)
+[<img src="/screenshots/4.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/4.png)
+[<img src="/screenshots/5.png" align="center" width="30%" hspace="10" vspace="10">](/screenshots/5.png)
 
+    
+[<img src="/screenshots/recording.gif" align="center"
+width="67%"
+    hspace="10" vspace="10">](/screenshots/recording.gif)
 
 <br><br>
 ## License
